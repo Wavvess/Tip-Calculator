@@ -1,13 +1,11 @@
-@font-face {
-    font-family: ;
-    src: url("");
-}
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
 
 *{
     padding: 0;
     margin: 0;
+    font-family: "Rakkas";
+    /* font-weight: 900; */
 }
-
 
 :root{
     --Strong-cyan: hsl(172, 67%, 45%);
@@ -17,4 +15,237 @@
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
+}
+
+
+.main-container{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    margin-bottom: 4rem;
+}
+
+.title-container h2{
+    letter-spacing: 8px; 
+    text-transform:uppercase;
+    font-weight: 300;
+    color: var(--Very-dark-cyan);
+    font-size: 26px;
+}
+
+.tip-container{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 30px 38px;
+    box-shadow: 0px 1px 8px 2px rgba(11, 207, 181, 0.082);
+    width: 710px;
+}
+
+.input-area{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    margin-right: 50px;
+    width: 355px;
+    margin-block: 10px;
+}
+
+.result-area{
+    width: 355px;
+}
+.number-input-container{
+ margin-bottom: 40px;   
+}
+
+.inputarea-inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: right;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.inputarea-inputs img{
+    width: 11px;
+    height: 16px;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.inputarea-inputs input[type="text"]{
+    background-color: var(--Very-light-grayish-cyan);
+    outline: none;
+    border: none;
+    text-align: right;
+    width: 70%;
+    font-size: 25px;
+    color: var(--Very-dark-cyan);
+}
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.grid-container input[type="text"]{
+    text-align: center;
+}
+
+.grid-container input::placeholder{
+    font-size: 18px;
+    color: var(--Very-dark-cyan);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.tip-percentages{
+    padding: 5px 20px;
+    font-size: 22px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: 0.1s ease;
+}
+
+.custom-input{
+    background-color: var(--Very-light-grayish-cyan);
+    outline: none;
+    color: var(--Very-dark-cyan)
+}
+
+.input-labels{
+    color: var(--Dark-grayish-cyan);
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.select-label{
+    margin-bottom: 8px !important;
+}
+
+
+/* Result area */
+
+.result-area{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-cyan);
+    padding: 50px 25px;
+    border-radius: 15px;
+    /* width: 300px; */
+    justify-content: space-between;
+}
+
+.tip-amount{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    color: rgb(199, 199, 199);
+    letter-spacing: 1px; 
+    font-weight: 100 !important;
+}
+
+.main-text-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Very-light-grayish-cyan);
+}
+
+.result-headers{
+font-size: 18px;
+}
+
+.result-p{
+font-size: 13px;
+font-weight: 100;
+}
+
+.spans{
+    font-size: 45px;
+    color: var(--Strong-cyan);
+    letter-spacing:3px;
+}
+
+.reset-btn{
+    background-color: hsl(183, 39%, 29%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--Dark-grayish-cyan)
+}
+
+
+
+/* active classes */
+
+.is-active{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .title-container h2 {
+        font-size: 20px; /* Smaller font size for the title */
+        margin-bottom: 2rem; /* Reduce margin between title lines */
+    }
+
+    .tip-container {
+        flex-direction: column; /* Stack input area and result area vertically */
+        padding: 20px; /* Reduce padding inside the container */
+        width: 100%; /* Use full width */
+    }
+
+    .input-area, .result-area {
+        width: 100%; /* Ensure input and result areas take full width */
+        margin-right: 0; /* Remove the margin right in input area */
+    }
+
+    .inputarea-inputs, .tip-percentages, .custom-input {
+        font-size: 18px; /* Adjust font size for better legibility */
+    }
+
+    .result-headers, .result-p {
+        font-size: 16px; /* Smaller font sizes for result headers and paragraphs */
+    }
+
+    .spans {
+        font-size: 36px; /* Reduce font size for the results to fit better */
+    }
+
+    .reset-btn {
+        margin-top: 20px; /* Add space above the reset button */
+    }
 }
