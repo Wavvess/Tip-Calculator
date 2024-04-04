@@ -17,7 +17,6 @@
     --White: hsl(0, 0%, 100%);
 }
 
-
 .main-container{
     height: 100vh;
     width: 100%;
@@ -50,7 +49,8 @@
     border-radius: 15px;
     padding: 30px 38px;
     box-shadow: 0px 1px 8px 2px rgba(11, 207, 181, 0.082);
-    width: 710px;
+    max-width: 710px;
+    flex: 1;
 }
 
 .input-area{
@@ -125,6 +125,7 @@
     border-radius: 4px;
     letter-spacing: 1px;
     transition: 0.1s ease;
+    cursor: pointer;
 }
 
 .custom-input{
@@ -153,8 +154,8 @@
     background-color: var(--Very-dark-cyan);
     padding: 50px 25px;
     border-radius: 15px;
-    /* width: 300px; */
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .tip-amount{
@@ -211,6 +212,15 @@ font-weight: 100;
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
 }
+
+.content-wrapper {
+    width: 100%;
+    padding: 0 20px; /* Padding applied here */
+    box-sizing: border-box; /* Include padding in width calculation */
+    max-width: 1200px; /* Optional: Constrain max width for large screens */
+    margin: auto; /* Center content in large screens */
+}
+
 
 @media (max-width: 800px) {
     .main-container {
